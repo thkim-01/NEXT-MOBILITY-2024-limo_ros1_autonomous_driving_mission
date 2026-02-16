@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>limo_autonomous_controller</name>
+  <version>1.0.0</version>
+  <description>
+    Limo Pro 자율주행 제어 패키지 - 차선 추종, 장애물 회피, V2X 통신 기능 포함
+  </description>
+
+  <maintainer email="thkim@example.com">KIM TAE HEON</maintainer>
+  <license>MIT</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <!-- ROS Dependencies -->
+  <depend>rospy</depend>
+  <depend>std_msgs</depend>
+  <depend>sensor_msgs</depend>
+  <depend>geometry_msgs</depend>
+  <depend>cv_bridge</depend>
+  <depend>image_transport</depend>
+
+  <!-- Python Dependencies (런타임) -->
+  <exec_depend>python3-numpy</exec_depend>
+  <exec_depend>python3-opencv</exec_depend>
+
+  <export>
+  </export>
+</package>

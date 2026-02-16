@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- Limo Pro 자율주행 제어 노드 -->
+  <node pkg="limo_autonomous_controller" 
+        type="combined_controller.py" 
+        name="combined_controller_node" 
+        output="screen">
+    
+    <!-- 파라미터 설정 (필요시 조정) -->
+    <!-- <param name="default_speed" value="0.25" /> -->
+    <!-- <param name="min_obstacle_distance" value="0.39" /> -->
+    <!-- <param name="scan_degree" value="45" /> -->
+  </node>
+
+  <!-- 카메라 노드 실행 (Limo Pro의 카메라 드라이버 실행) -->
+  <!-- Limo Pro의 카메라 패키지에 맞게 수정 필요 -->
+  <!-- 
+  <include file="$(find limo_bringup)/launch/limo_camera.launch" />
+  -->
+
+  <!-- LiDAR 노드 실행 (Limo Pro의 LiDAR 드라이버 실행) -->
+  <!-- Limo Pro의 LiDAR 패키지에 맞게 수정 필요 -->
+  <!--
+  <include file="$(find limo_bringup)/launch/limo_lidar.launch" />
+  -->
+
+</launch>

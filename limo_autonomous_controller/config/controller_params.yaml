@@ -1,0 +1,46 @@
+# Limo Autonomous Controller Configuration
+
+# 속도 설정
+default_speed: 0.25           # 기본 주행 속도 (m/s)
+obstacle_avoidance_speed: 0.15  # 장애물 회피 속도 (m/s)
+search_speed: 0.18            # 차선 탐색 속도 (m/s)
+
+# LiDAR 설정
+scan_degree: 45               # 스캔 각도 (좌우 각도, 도 단위)
+min_obstacle_distance: 0.39   # 장애물 감지 최소 거리 (미터)
+
+# 카메라 설정
+crop_height_start: 360        # 이미지 크롭 시작 높이 (픽셀)
+crop_height_end: 480          # 이미지 크롭 종료 높이 (픽셀)
+
+# HSV 색상 범위 - 노란색
+yellow_lower: [15, 80, 80]    # HSV 하한값
+yellow_upper: [45, 255, 255]  # HSV 상한값
+
+# HSV 색상 범위 - 흰색
+white_lower: [0, 0, 200]      # HSV 하한값
+white_upper: [180, 30, 255]   # HSV 상한값
+
+# 제어 설정
+angle_resolution_divisor: 640  # 각도 해상도 계산용 (pi / 640)
+image_center_x: 320           # 이미지 중심 X 좌표 (픽셀)
+
+# V2X 경로 명령 설정
+v2x_path_a:
+  linear_x: 0.25              # 좌회전 선속도
+  angular_z: 0.25             # 좌회전 각속도
+
+v2x_path_b:
+  linear_x: 0.20              # 직진 선속도
+  angular_z: -0.12            # 직진 각속도
+
+v2x_path_c:
+  linear_x: 0.17              # 우회전 선속도
+  angular_z: -0.21            # 우회전 각속도
+
+# 장애물 회피 설정
+obstacle_turn_left: -0.45     # 좌회전 각속도
+obstacle_turn_right: 0.45     # 우회전 각속도
+
+# ROS 설정
+control_loop_rate: 20         # 제어 루프 주기 (Hz)
